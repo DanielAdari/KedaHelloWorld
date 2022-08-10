@@ -1,7 +1,7 @@
 import time
 import kafka
 
-consumer = kafka.KafkaConsumer(bootstrap_servers='localhost:9094')
+consumer = kafka.KafkaConsumer(bootstrap_servers='kafka.svc:9092')
 
 consumer.subscribe(['test-topic'])
 
