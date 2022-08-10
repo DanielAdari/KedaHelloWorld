@@ -2,10 +2,10 @@ FROM python:3.8
 
 WORKDIR /code
 
-COPY python/requirements.txt /code/python/
-RUN pip install -r python/requirements.txt
+COPY src/requirements.txt /code/src/
+RUN pip install -r src/requirements.txt
 
 COPY . /code/
 
 ENTRYPOINT []
-CMD ["python", "kafka_consumer.py"]
+CMD ["python3", "src/kafka_consumer.py"]
