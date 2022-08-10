@@ -1,0 +1,15 @@
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: kafka-consumer-scaled-object
+spec:
+  scaleTargetRef:
+    apiVersion:    apps/v1 
+    kind:          Deployment        
+    name:          kafka-consumer-deployment
+  triggers:
+  - type: kafka
+    metadata:
+      bootstrapServers: kafka.svc:9092
+      consumerGroup: my-group
+      topic: test-topic
