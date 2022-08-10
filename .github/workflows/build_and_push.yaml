@@ -20,4 +20,4 @@ jobs:
         with:
           context: ./app/kafka_consumer/
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/kafka_consumer:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/kafka-consumer:latest
